@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
 <title>Back 2 U — เลือกเวอร์ชันนำเสนอ</title>
+<link rel="icon" href="logo.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -29,11 +30,9 @@ body::before{
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 main{width:min(920px,100%);text-align:center;position:relative;z-index:1}
-.mark{width:72px;height:72px;margin:0 auto 18px;border-radius:22%;
-  background:linear-gradient(145deg,#fff,#eefaf8);border:1px solid rgba(15,42,107,.08);
-  box-shadow:0 16px 40px rgba(15,42,107,.12),0 0 48px rgba(34,184,207,.2);
-  display:grid;place-items:center;font-weight:700;font-size:28px;letter-spacing:-.04em}
-.mark b{background:linear-gradient(90deg,var(--teal),var(--mint));-webkit-background-clip:text;background-clip:text;color:transparent}
+.logo{width:88px;height:88px;margin:0 auto 18px;border-radius:22%;
+  background:#fff url("logo.png") center/80% 80% no-repeat;
+  box-shadow:0 16px 40px rgba(15,42,107,.14),0 0 0 1px rgba(15,42,107,.06)}
 h1{font-size:clamp(40px,7vw,68px);font-weight:700;letter-spacing:-.03em;line-height:1.05;margin-bottom:10px;text-wrap:balance}
 h1 b{background:linear-gradient(90deg,var(--teal),var(--mint));-webkit-background-clip:text;background-clip:text;color:transparent}
 p.sub{color:var(--ink);font-size:clamp(16px,2.2vw,20px);margin-bottom:36px;line-height:1.55;text-wrap:pretty}
@@ -66,7 +65,7 @@ footer{margin-top:36px;font-size:14px;color:#6b7a99}
 </head>
 <body>
 <main>
-  <div class="mark" aria-hidden="true">B<b>2</b></div>
+  <div class="logo" role="img" aria-label="Back 2 U"></div>
   <h1>Back <b>2</b> U</h1>
   <p class="sub">ศูนย์รวมการแจ้งติดตามของหายภายในห้องปฏิบัติการคอมพิวเตอร์ — เลือกเวอร์ชันนำเสนอ</p>
   <div class="grid">
