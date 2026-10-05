@@ -29,37 +29,49 @@ body::before{
   content:"";position:fixed;inset:0;pointer-events:none;opacity:.035;
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
 }
-main{width:min(920px,100%);text-align:center;position:relative;z-index:1}
+main{width:min(1180px,100%);text-align:center;position:relative;z-index:1}
 .logo{width:88px;height:88px;margin:0 auto 18px;border-radius:22%;
   background:#fff url("logo.png") center/80% 80% no-repeat;
   box-shadow:0 16px 40px rgba(15,42,107,.14),0 0 0 1px rgba(15,42,107,.06)}
 h1{font-size:clamp(40px,7vw,68px);font-weight:700;letter-spacing:-.03em;line-height:1.05;margin-bottom:10px;text-wrap:balance}
 h1 b{background:linear-gradient(90deg,var(--teal),var(--mint));-webkit-background-clip:text;background-clip:text;color:transparent}
-p.sub{color:var(--ink);font-size:clamp(16px,2.2vw,20px);margin-bottom:36px;line-height:1.55;text-wrap:pretty}
-.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));text-align:left}
-a.card{display:block;text-decoration:none;color:inherit;border-radius:28px;padding:30px 28px 26px;
+p.sub{color:var(--ink);font-size:clamp(16px,2.2vw,20px);margin-bottom:30px;line-height:1.55;text-wrap:pretty}
+
+.sec{margin-bottom:28px}
+.sec-h{display:flex;align-items:center;gap:12px;margin-bottom:14px;text-align:left}
+.sec-h span{font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#5c7596;white-space:nowrap}
+.sec-h i{flex:1;height:1px;background:var(--sky2)}
+
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(286px,1fr));text-align:left}
+a.card{display:flex;flex-direction:column;text-decoration:none;color:inherit;border-radius:28px;padding:28px 26px 24px;
   transition:transform .28s cubic-bezier(.22,1,.36,1),box-shadow .28s;position:relative;overflow:hidden}
 a.card:hover{transform:translateY(-7px)}
 a.card:focus-visible{outline:3px solid var(--teal);outline-offset:4px}
-.card.v1{background:#fff;border:1px solid var(--sky2);box-shadow:0 12px 36px rgba(15,42,107,.08)}
-.card.v1:hover{box-shadow:0 24px 52px rgba(15,42,107,.14)}
-.card.v2{background:
-    radial-gradient(120% 80% at 0% 0%,rgba(34,184,207,.28),transparent 55%),
-    radial-gradient(90% 70% at 100% 120%,rgba(52,211,153,.22),transparent 50%),
+.card.dark{background:
+    radial-gradient(120% 80% at 0% 0%,rgba(34,184,207,.3),transparent 55%),
+    radial-gradient(90% 70% at 100% 120%,rgba(52,211,153,.24),transparent 50%),
     var(--navy2);color:#fff;
   border:1px solid rgba(255,255,255,.16);box-shadow:0 16px 44px rgba(12,34,88,.28)}
-.card.v2:hover{box-shadow:0 28px 60px rgba(12,34,88,.38)}
-.tag{display:inline-block;font-size:13px;font-weight:600;padding:5px 12px;border-radius:999px;margin-bottom:14px}
-.card.v1 .tag{background:var(--sky);color:#0e7f92}
-.card.v2 .tag{background:rgba(52,211,153,.16);color:#34d399;border:1px solid rgba(52,211,153,.35)}
-.card h2{font-size:26px;font-weight:700;margin-bottom:8px;letter-spacing:-.02em;text-wrap:balance}
-.card p{font-size:16px;line-height:1.6}
-.card.v1 p{color:#4b5a7a}
-.card.v2 p{color:rgba(234,242,255,.78)}
-.go{display:inline-flex;align-items:center;gap:8px;margin-top:20px;font-weight:600;color:#fff;
-  background:linear-gradient(90deg,var(--teal),var(--mint));padding:12px 20px;border-radius:999px;font-size:15px}
-.card.v2 .go{background:#fff;color:var(--navy2)}
-footer{margin-top:36px;font-size:14px;color:#6b7a99}
+.card.dark:hover{box-shadow:0 28px 60px rgba(12,34,88,.38)}
+.card.lite{background:#fff;border:1px solid var(--sky2);box-shadow:0 12px 36px rgba(15,42,107,.08)}
+.card.lite:hover{box-shadow:0 24px 52px rgba(15,42,107,.14)}
+.no{position:absolute;top:20px;right:22px;font-size:40px;font-weight:700;letter-spacing:-.05em;line-height:1;opacity:.13}
+.tag{display:inline-block;font-size:13px;font-weight:600;padding:5px 12px;border-radius:999px;margin-bottom:12px;align-self:flex-start}
+.card.lite .tag{background:var(--sky);color:#0e7f92}
+.card.dark .tag{background:rgba(52,211,153,.16);color:#34d399;border:1px solid rgba(52,211,153,.35)}
+.card h2{font-size:24px;font-weight:700;margin-bottom:8px;letter-spacing:-.02em;text-wrap:balance}
+.card p{font-size:15px;line-height:1.6;flex:1}
+.card.lite p{color:#4b5a7a}
+.card.dark p{color:rgba(234,242,255,.78)}
+ul.f{list-style:none;margin:12px 0 0;padding:0;display:flex;flex-direction:column;gap:5px}
+ul.f li{font-size:13.5px;line-height:1.45;display:flex;gap:7px}
+ul.f li::before{content:"▸";flex:none}
+.card.lite ul.f{color:#5c7596}.card.lite ul.f li::before{color:var(--teal)}
+.card.dark ul.f{color:rgba(234,242,255,.72)}.card.dark ul.f li::before{color:var(--mint)}
+.go{display:inline-flex;align-items:center;gap:8px;margin-top:18px;font-weight:600;color:#fff;
+  background:linear-gradient(90deg,var(--teal),var(--mint));padding:11px 19px;border-radius:999px;font-size:15px;align-self:flex-start}
+.card.dark .go{background:#fff;color:var(--navy2)}
+footer{margin-top:30px;font-size:14px;color:#6b7a99;line-height:1.7}
 @media (prefers-reduced-motion:reduce){a.card{transition:none}a.card:hover{transform:none}}
 </style>
 </head>
@@ -68,21 +80,61 @@ footer{margin-top:36px;font-size:14px;color:#6b7a99}
   <div class="logo" role="img" aria-label="Back 2 U"></div>
   <h1>Back <b>2</b> U</h1>
   <p class="sub">ศูนย์รวมการแจ้งติดตามของหายภายในห้องปฏิบัติการคอมพิวเตอร์ — เลือกเวอร์ชันนำเสนอ</p>
-  <div class="grid">
-    <a class="card v1" href="v1/">
-      <span class="tag">ฉบับเต็ม</span>
-      <h2>รายละเอียดโครงงาน + สาธิตครบ</h2>
-      <p>33 สไลด์ · เนื้อหา 1.1–1.7 ครบ · สาธิตการใช้งานจริง 13 ฉาก · ความปลอดภัย</p>
-      <span class="go">เปิดฉบับเต็ม →</span>
-    </a>
-    <a class="card v2" href="v2/" id="v2">
-      <span class="tag">ฉบับ Keynote</span>
-      <h2>เล่าเรื่องสั้น กระชับ ทรงพลัง</h2>
-      <p>44 สไลด์ · หนึ่งสไลด์หนึ่งประเด็น · สไตล์ Apple Keynote / Google I/O · เนื้อหาเดียวกับฉบับเต็ม</p>
-      <span class="go">เปิดฉบับ Keynote →</span>
-    </a>
-  </div>
-  <footer>เปิดได้โดยไม่ต้องล็อกอิน · ทุกเวอร์ชันมีปุ่ม "บันทึกเป็น PowerPoint"</footer>
+
+  <section class="sec">
+    <div class="sec-h"><span>Motion Design — เสนอเต็มจอ</span><i></i></div>
+    <div class="grid">
+      <a class="card dark" href="m1/">
+        <span class="no">01</span>
+        <span class="tag">เสียงพากย์ AI · เล่นเอง</span>
+        <h2>เล่นเองจนจบ พร้อมเสียงพากย์</h2>
+        <p>15 ฉาก เล่าทีละประเด็นด้วยการซูมเข้า–ออกและเปิดโมดอลจากหน้าจอจริง</p>
+        <ul class="f">
+          <li>เสียงพากย์ไทย/อังกฤษ ตรงกับซับไตเติลทุกคำ</li>
+          <li>เสียงประกอบ + โมชันกราฟิกสังเคราะห์สด</li>
+          <li><b>ปุ่ม Export วิดีโอ</b> — ได้ไฟล์ MP4 ส่งไลน์ได้เลย</li>
+        </ul>
+        <span class="go">เปิดฉบับเสียงพากย์ →</span>
+      </a>
+      <a class="card dark" href="m2/">
+        <span class="no">02</span>
+        <span class="tag">นำเสนอเอง · กดเลื่อนเอง</span>
+        <h2>คุณพูดเอง ภาพเดินตามจังหวะ</h2>
+        <p>ภาพและจังหวะเหมือนฉบับแรกทุกประการ แต่รอจนกว่าคุณจะกด ไม่มีเสียงพากย์มาแย่งพูด</p>
+        <ul class="f">
+          <li>Space / → ไปต่อ · ← ย้อน · ↓ ข้ามฉาก</li>
+          <li>ซับไตเติลสองภาษาเปิด–ปิดได้ตลอด</li>
+          <li>อัดวิดีโอพร้อม<b>เสียงไมค์ของคุณเอง</b>ได้</li>
+        </ul>
+        <span class="go">เปิดฉบับนำเสนอเอง →</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="sec-h"><span>ฉบับสไลด์ — เนื้อหาละเอียด</span><i></i></div>
+    <div class="grid">
+      <a class="card lite" href="v1/">
+        <span class="no">03</span>
+        <span class="tag">ฉบับเต็ม</span>
+        <h2>รายละเอียดโครงงาน + สาธิตครบ</h2>
+        <p>33 สไลด์ · เนื้อหา 1.1–1.7 ครบ · สาธิตการใช้งานจริง 13 ฉาก · ความปลอดภัย</p>
+        <span class="go">เปิดฉบับเต็ม →</span>
+      </a>
+      <a class="card lite" href="v2/">
+        <span class="no">04</span>
+        <span class="tag">ฉบับ Keynote</span>
+        <h2>เล่าเรื่องสั้น กระชับ ทรงพลัง</h2>
+        <p>44 สไลด์ · หนึ่งสไลด์หนึ่งประเด็น · สไตล์ Apple Keynote / Google I/O · เนื้อหาเดียวกับฉบับเต็ม</p>
+        <span class="go">เปิดฉบับ Keynote →</span>
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    เปิดได้โดยไม่ต้องล็อกอิน และไม่ต้องต่ออินเทอร์เน็ตหลังโหลดเสร็จ<br>
+    ฉบับ Motion Design มีปุ่มบันทึกวิดีโอ · ฉบับสไลด์มีปุ่ม "บันทึกเป็น PowerPoint"
+  </footer>
 </main>
 </body>
 </html>
