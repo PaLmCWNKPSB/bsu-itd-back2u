@@ -73,6 +73,10 @@ ul.f li::before{content:"▸";flex:none}
 .card.dark .go{background:#fff;color:var(--navy2)}
 footer{margin-top:30px;font-size:14px;color:#6b7a99;line-height:1.7}
 @media (prefers-reduced-motion:reduce){a.card{transition:none}a.card:hover{transform:none}}
+.dlbar{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px;margin-top:16px;font-size:14px;color:#4b5a7a}
+.dlbar a{display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:0 18px;border-radius:999px;border:1.5px solid var(--teal);background:#fff;color:var(--navy2);font-weight:600;text-decoration:none}
+.dlbar a:hover{background:var(--sky)}
+.dlbar a:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
 </style>
 </head>
 <body>
@@ -87,12 +91,12 @@ footer{margin-top:30px;font-size:14px;color:#6b7a99;line-height:1.7}
       <a class="card dark" href="m1/">
         <span class="no">01</span>
         <span class="tag">เสียงพากย์ AI · เล่นเอง</span>
-        <h2>เล่นเองจนจบ พร้อมเสียงพากย์</h2>
-        <p>15 ฉาก เล่าทีละประเด็นด้วยการซูมเข้า–ออกและเปิดโมดอลจากหน้าจอจริง</p>
+        <h2>เล่นเองจนจบ พร้อมเสียงบรรยาย</h2>
+        <p>ฟิล์มยาวราว 4 นาที เนื้อหา 1.1–1.7 ครบ แล้วสาธิตแอปจริงทีละขั้นด้วยภาพถ่ายจริง ซูมเข้า–ออก และเปิดหน้าต่างตามแอปจริง</p>
         <ul class="f">
-          <li>เสียงพากย์ไทย/อังกฤษ ตรงกับซับไตเติลทุกคำ</li>
-          <li>เสียงประกอบ + โมชันกราฟิกสังเคราะห์สด</li>
-          <li><b>ปุ่ม Export วิดีโอ</b> — ได้ไฟล์ MP4 ส่งไลน์ได้เลย</li>
+          <li><b>เลือกเสียงผู้ชาย หรือเสียงผู้หญิง</b> · ไทย/อังกฤษ ตรงกับซับทุกคำ</li>
+          <li>ซับสองภาษา ไม่บังเนื้อหา · QR บนจอสแกนได้จริง</li>
+          <li><b>ดาวน์โหลด MP4</b> แยกเสียงชาย/หญิง ส่งในกลุ่มไลน์ได้เลย</li>
         </ul>
         <span class="go">เปิดฉบับเสียงพากย์ →</span>
       </a>
@@ -100,15 +104,17 @@ footer{margin-top:30px;font-size:14px;color:#6b7a99;line-height:1.7}
         <span class="no">02</span>
         <span class="tag">นำเสนอเอง · กดเลื่อนเอง</span>
         <h2>คุณพูดเอง ภาพเดินตามจังหวะ</h2>
-        <p>ภาพและจังหวะเหมือนฉบับแรกทุกประการ แต่รอจนกว่าคุณจะกด ไม่มีเสียงพากย์มาแย่งพูด</p>
+        <p>ภาพและจังหวะเหมือนฉบับแรกทุกประการ แต่หยุดรอทุกจังหวะจนกว่าคุณจะกด ไม่มีเสียงบรรยายมาแย่งพูด</p>
         <ul class="f">
-          <li>Space / → ไปต่อ · ← ย้อน · ↓ ข้ามฉาก</li>
-          <li>ซับไตเติลสองภาษาเปิด–ปิดได้ตลอด</li>
-          <li>อัดวิดีโอพร้อม<b>เสียงไมค์ของคุณเอง</b>ได้</li>
+          <li>Space / → จังหวะถัดไป · ← ย้อนจังหวะ · F เต็มจอ</li>
+          <li>กด C เปิดบทพูดเป็นซับช่วยจำได้</li>
+          <li>ช่วงถาม·ตอบ พิมพ์ความเห็นผู้ฟังขึ้นจอได้</li>
         </ul>
         <span class="go">เปิดฉบับนำเสนอเอง →</span>
       </a>
     </div>
+    <div class="dlbar"><span>ดาวน์โหลดวิดีโอ MP4 (บรรยายไทย ซับไทย–อังกฤษ)</span>
+      <a href="m1/Back2U-TH-male.mp4" download>⬇ เสียงผู้ชาย</a><a href="m1/Back2U-TH-female.mp4" download>⬇ เสียงผู้หญิง</a></div>
   </section>
 
   <section class="sec">
@@ -133,7 +139,8 @@ footer{margin-top:30px;font-size:14px;color:#6b7a99;line-height:1.7}
 
   <footer>
     เปิดได้โดยไม่ต้องล็อกอิน และไม่ต้องต่ออินเทอร์เน็ตหลังโหลดเสร็จ<br>
-    ฉบับ Motion Design มีปุ่มบันทึกวิดีโอ · ฉบับสไลด์มีปุ่ม "บันทึกเป็น PowerPoint"
+    ฉบับ Motion Design ดาวน์โหลดเป็น MP4 ได้ · ฉบับสไลด์มีปุ่ม "บันทึกเป็น PowerPoint"<br>
+    ภาพสิ่งของในฉากสาธิตเป็นภาพถ่ายจริงจาก Pexels / Unsplash (ใช้ได้ฟรีตามสัญญาอนุญาต) · ข้อมูลในโทรศัพท์จำลองเป็นข้อมูลตัวอย่าง
   </footer>
 </main>
 </body>
