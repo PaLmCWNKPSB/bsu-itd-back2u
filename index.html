@@ -17,7 +17,7 @@
 *{box-sizing:border-box;margin:0}
 html{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 body{
-  min-height:100dvh;display:grid;place-items:center;padding:28px 20px 36px;
+  min-height:100dvh;display:grid;place-items:center;padding:28px 16px 36px;
   font-family:"Kanit","Leelawadee UI",Tahoma,sans-serif;color:var(--navy);
   background:
     radial-gradient(900px 520px at 12% -10%,#fff 0%,transparent 58%),
@@ -38,15 +38,17 @@ h1 b{background:linear-gradient(90deg,var(--teal),var(--mint));-webkit-backgroun
 p.sub{color:var(--ink);font-size:clamp(16px,2.2vw,20px);margin-bottom:30px;line-height:1.55;text-wrap:pretty}
 
 .sec{margin-bottom:28px}
-.sec-h{display:flex;align-items:center;gap:12px;margin-bottom:14px;text-align:left}
-.sec-h span{font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#5c7596;white-space:nowrap}
+.sec-h{display:flex;align-items:center;gap:12px;margin-bottom:8px;text-align:left}
+.sec-h span{font-size:13px;font-weight:600;letter-spacing:.02em;text-transform:uppercase;color:#5c7596;white-space:nowrap}
 .sec-h i{flex:1;height:1px;background:var(--sky2)}
+.sec-d{text-align:left;font-size:15px;line-height:1.6;color:#4b5a7a;margin-bottom:14px;text-wrap:pretty}
 
 .grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(286px,1fr));text-align:left}
-a.card{display:flex;flex-direction:column;text-decoration:none;color:inherit;border-radius:28px;padding:28px 26px 24px;
+.grid.g4{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.card{display:flex;flex-direction:column;text-decoration:none;color:inherit;border-radius:28px;padding:28px 26px 24px;
   transition:transform .28s cubic-bezier(.22,1,.36,1),box-shadow .28s;position:relative;overflow:hidden}
-a.card:hover{transform:translateY(-7px)}
-a.card:focus-visible{outline:3px solid var(--teal);outline-offset:4px}
+.card:hover{transform:translateY(-7px)}
+a.card:focus-visible,.card a:focus-visible{outline:3px solid var(--teal);outline-offset:4px}
 .card.dark{background:
     radial-gradient(120% 80% at 0% 0%,rgba(34,184,207,.3),transparent 55%),
     radial-gradient(90% 70% at 100% 120%,rgba(52,211,153,.24),transparent 50%),
@@ -68,15 +70,17 @@ ul.f li{font-size:13.5px;line-height:1.45;display:flex;gap:7px}
 ul.f li::before{content:"▸";flex:none}
 .card.lite ul.f{color:#5c7596}.card.lite ul.f li::before{color:var(--teal)}
 .card.dark ul.f{color:rgba(234,242,255,.72)}.card.dark ul.f li::before{color:var(--mint)}
-.go{display:inline-flex;align-items:center;gap:8px;margin-top:18px;font-weight:600;color:#fff;
-  background:linear-gradient(90deg,var(--teal),var(--mint));padding:11px 19px;border-radius:999px;font-size:15px;align-self:flex-start}
+.go{display:inline-flex;align-items:center;gap:8px;margin-top:18px;font-weight:600;color:#fff;text-decoration:none;
+  background:linear-gradient(90deg,var(--teal),var(--mint));padding:11px 19px;border-radius:999px;font-size:15px;align-self:flex-start;min-height:44px}
 .card.dark .go{background:#fff;color:var(--navy2)}
+.acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.acts .go{margin-top:0}
+.dl{display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:0 16px;border-radius:999px;font-size:14px;font-weight:600;text-decoration:none;
+  color:#fff;border:1.5px solid rgba(255,255,255,.42)}
+.dl:hover{background:rgba(255,255,255,.1)}
+.dl small{font-weight:400;opacity:.75}
 footer{margin-top:30px;font-size:14px;color:#6b7a99;line-height:1.7}
-@media (prefers-reduced-motion:reduce){a.card{transition:none}a.card:hover{transform:none}}
-.dlbar{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px;margin-top:16px;font-size:14px;color:#4b5a7a}
-.dlbar a{display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:0 18px;border-radius:999px;border:1.5px solid var(--teal);background:#fff;color:var(--navy2);font-weight:600;text-decoration:none}
-.dlbar a:hover{background:var(--sky)}
-.dlbar a:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){.card{transition:none}.card:hover{transform:none}}
 </style>
 </head>
 <body>
@@ -86,25 +90,27 @@ footer{margin-top:30px;font-size:14px;color:#6b7a99;line-height:1.7}
   <p class="sub">ศูนย์รวมการแจ้งติดตามของหายภายในห้องปฏิบัติการคอมพิวเตอร์ — เลือกเวอร์ชันนำเสนอ</p>
 
   <section class="sec">
-    <div class="sec-h"><span>Motion Design — เสนอเต็มจอ</span><i></i></div>
+    <div class="sec-h"><span>Motion Design — ฟิล์มเสียงพากย์ เล่นเองจนจบ</span><i></i></div>
+    <p class="sec-d">รายละเอียดโครงงาน 1.1–1.7 → สาธิตแอปจริงครบทุกบทบาท (คนเก็บได้ · เจ้าของ · แอดมิน) → ความปลอดภัย → ถาม·ตอบ · ยาวราว 7 นาที · ภาพสิ่งของเป็นภาพถ่ายจริง · QR บนจอสแกนได้จริง</p>
     <div class="grid">
-      <a class="card dark" href="m1/">
+      <article class="card dark">
         <span class="no">01</span>
-        <span class="tag">เสียงพากย์ AI · เล่นเอง</span>
-        <h2>เล่นเองจนจบ พร้อมเสียงบรรยาย</h2>
-        <p>ฟิล์มยาวราว 4 นาที เนื้อหา 1.1–1.7 ครบ แล้วสาธิตแอปจริงทีละขั้นด้วยภาพถ่ายจริง ซูมเข้า–ออก และเปิดหน้าต่างตามแอปจริง</p>
-        <ul class="f">
-          <li><b>เลือกเสียงผู้ชาย หรือเสียงผู้หญิง</b> · ไทย/อังกฤษ ตรงกับซับทุกคำ</li>
-          <li>ซับสองภาษา ไม่บังเนื้อหา · QR บนจอสแกนได้จริง</li>
-          <li><b>ดาวน์โหลด MP4</b> แยกเสียงชาย/หญิง ส่งในกลุ่มไลน์ได้เลย</li>
-        </ul>
-        <span class="go">เปิดฉบับเสียงพากย์ →</span>
-      </a>
+        <span class="tag">เสียงไทย · หญิง–ชายผลัดกัน</span>
+        <h2>ฟิล์มนำเสนอ พร้อมเสียงบรรยาย</h2>
+        <p>สองเสียงผลัดกันเล่าเหมือนพิธีกรคู่ · ซับไทย · ยาว <span data-len="th">6:37</span> นาที</p>
+        <div class="acts"><a class="go" href="th/">เปิดฟิล์ม →</a><a class="dl" href="th/Back2U-TH.mp4" download>⬇ MP4 <small data-size="th">· 29 MB</small></a></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="sec-h"><span>นำเสนอเอง — ภาพชุดเดียวกัน คุณเป็นคนพูด</span><i></i></div>
+    <div class="grid">
       <a class="card dark" href="m2/">
         <span class="no">02</span>
         <span class="tag">นำเสนอเอง · กดเลื่อนเอง</span>
         <h2>คุณพูดเอง ภาพเดินตามจังหวะ</h2>
-        <p>ภาพและจังหวะเหมือนฉบับแรกทุกประการ แต่หยุดรอทุกจังหวะจนกว่าคุณจะกด ไม่มีเสียงบรรยายมาแย่งพูด</p>
+        <p>ภาพและจังหวะเหมือนฟิล์มทุกประการ แต่หยุดรอทุกจังหวะจนกว่าคุณจะกด ไม่มีเสียงบรรยายมาแย่งพูด</p>
         <ul class="f">
           <li>Space / → จังหวะถัดไป · ← ย้อนจังหวะ · F เต็มจอ</li>
           <li>กด C เปิดบทพูดเป็นซับช่วยจำได้</li>
@@ -113,8 +119,6 @@ footer{margin-top:30px;font-size:14px;color:#6b7a99;line-height:1.7}
         <span class="go">เปิดฉบับนำเสนอเอง →</span>
       </a>
     </div>
-    <div class="dlbar"><span>ดาวน์โหลดวิดีโอ MP4 (บรรยายไทย ซับไทย–อังกฤษ)</span>
-      <a href="m1/Back2U-TH-male.mp4" download>⬇ เสียงผู้ชาย</a><a href="m1/Back2U-TH-female.mp4" download>⬇ เสียงผู้หญิง</a></div>
   </section>
 
   <section class="sec">
@@ -139,7 +143,7 @@ footer{margin-top:30px;font-size:14px;color:#6b7a99;line-height:1.7}
 
   <footer>
     เปิดได้โดยไม่ต้องล็อกอิน และไม่ต้องต่ออินเทอร์เน็ตหลังโหลดเสร็จ<br>
-    ฉบับ Motion Design ดาวน์โหลดเป็น MP4 ได้ · ฉบับสไลด์มีปุ่ม "บันทึกเป็น PowerPoint"<br>
+    ฟิล์มดาวน์โหลดเป็น MP4 (720p) ได้ · ฉบับสไลด์มีปุ่ม "บันทึกเป็น PowerPoint"<br>
     ภาพสิ่งของในฉากสาธิตเป็นภาพถ่ายจริงจาก Pexels / Unsplash (ใช้ได้ฟรีตามสัญญาอนุญาต) · ข้อมูลในโทรศัพท์จำลองเป็นข้อมูลตัวอย่าง
   </footer>
 </main>
